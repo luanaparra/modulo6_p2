@@ -6,10 +6,6 @@ face_cascade = cv2.CascadeClassifier(
 
 input_video = cv2.imread('../assets/arsene.mp4')
 
-# if not input_video.isOpened():
-#     print("Error opening video file")
-#     exit(1)
-
 gray_video = cv2.cvtColor(src=input_video, code=cv2.COLOR_BGR2GRAY)
 
 faces = face_cascade.detectMultiScale(
