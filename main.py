@@ -4,11 +4,11 @@ face_cascade = cv2.CascadeClassifier(
     filename=f"{cv2.data.haarcascades}/haarcascade_frontalface_default.xml"
 )
 
-input_video = cv2.VideoCapture('../assets/arsene.mp4')
+input_video = cv2.imread('../assets/arsene.mp4')
 
-if not input_video.isOpened():
-    print("Error opening video file")
-    exit(1)
+# if not input_video.isOpened():
+#     print("Error opening video file")
+#     exit(1)
 
 gray_video = cv2.cvtColor(src=input_video, code=cv2.COLOR_BGR2GRAY)
 
