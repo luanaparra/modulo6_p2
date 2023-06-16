@@ -12,7 +12,7 @@ if not input_video.isOpened():
 
 gray_video = cv2.cvtColor(src=input_video, code=cv2.COLOR_BGR2GRAY)
 
-faces = input_video.detectMultiScale(
+faces = face_cascade.detectMultiScale(
     image=gray_video, 
     scaleFactor=1.05, 
     minNeighbors=5 
@@ -29,7 +29,7 @@ while True:
         break
     x, y, w, h = faces[0]
     cv2.rectangle(
-            img=input_video,
+            video=input_video,
             pt1=(x, y),
             pt2=(x+w, y+h),
             color=(0,0,255),
